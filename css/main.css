@@ -1,7 +1,31 @@
-body {
-    background: black;
+body, html {
+    height: 100%;
+    background-color: black;
 }
 
-.img {
-    margin: 2em auto;
+.trouble { 
+    background-image: url('../assets/trouble.jpg');
+    height: 100%; 
+    opacity: 0.3;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+
+.links {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  top: 10;
+  padding: 1rem;
+  background-color: transparent;
+  opacity: 0.5;
+  z-index: 100;
+}
+
+.spotify {
+    position: relative;
+    top: 9px;
 }
