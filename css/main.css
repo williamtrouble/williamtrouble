@@ -1,16 +1,24 @@
 body, html {
     height: 100%;
-    background-color: black;
+    background-color: #272727;
+    overflow: hidden;
+    margin: 0;
+
 }
 
 .trouble { 
     background-image: url('../assets/trouble.jpg');
     height: 100%; 
-    opacity: 0.3;
+    opacity: 0.6;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     z-index: -1;
+}
+
+.resource {
+    width: 25%;
+    display: inline-block;
 }
 
 .links {
@@ -23,9 +31,70 @@ body, html {
   background-color: transparent;
   opacity: 0.5;
   z-index: 100;
+  width: 50%;
+  margin: 0 auto;
 }
 
-.spotify {
+
+/*.spotify {
     position: relative;
-    top: 9px;
+    top: 12px;
+}
+
+.google,
+.itunes {
+    position: relative;
+    top: 10px;
+}*/
+
+.hover-off {
+    opacity: .6;
+    transition: opacity 0.10s;
+}
+
+.hover-on {
+    opacity: .9;
+    transition: all 0.25s;
+    transform: scale(1.01);
+}
+
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px) {
+    html {
+        background-image: url('../assets/trouble.jpg');
+        height: 100%; 
+        /*opacity: 0.4;*/
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .trouble {
+        background-image: none;
+    }
+
+    .links {
+    position: absolute;
+    /*right: 0;*/
+    /*bottom: 0;*/
+    /*left: 0;*/
+    background-color: transparent;
+    z-index: 100;
+    transform: scale(1.35);
+    }
+
+    .spotify {
+        position: relative;
+        top: 12px;
+        width: 500px;
+    }
+
+    .google,
+    .itunes {
+        position: relative;
+        top: 10px;
+        left: 500px;
+        width: 500px;
+    }
 }
