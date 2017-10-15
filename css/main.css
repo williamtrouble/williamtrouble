@@ -1,11 +1,6 @@
 /* FONTS */
 
 @font-face {
-  font-family: 'Trouble';
-  src: url('../fonts/pistolgrip.ttf'); /* IE9 Compat Modes */
-}
-
-@font-face {
     font-family: 'Soviet';
     src: url('../fonts/propaganda.ttf');
 }
@@ -15,9 +10,10 @@
     src: url('../fonts/imperial.ttf');
 }
 
+
 @font-face {
-    font-family: 'OldMill';
-    src: url('../fonts/oldmill.ttf');
+    font-family: 'Bolshevik';
+    src: url('../fonts/bolshevik.otf');
 }
 
 /* main */
@@ -47,7 +43,7 @@ body, html {
 .titles {
     display: inline-block;
     position: absolute;
-    top: 3%;
+    /*top: 1%;*/
     left: 22.5%;
     padding: 0.5rem;
     z-index: 1000;
@@ -63,22 +59,22 @@ body, html {
 }
 
 .name {
-    font-family: Soviet;
+    font-family: Bolshevik;
     font-size: 3.5em;
     position: relative;
     margin: 0 auto;
     text-align: center;
     opacity: 0.75;
-    letter-spacing: 0.5em;
+    letter-spacing: 0.2em;
+    line-height: 0.88em;
 }
 
 .song-name {
     font-family: SubSoviet;
-    font-size: 2.5em;
+    font-size: 2em;
+    top: 10px;
     position: relative;
     margin: 0 auto;
-    left: 85px;
-    bottom: 20px;
     opacity: 0.55;
     text-align: center;
 }
