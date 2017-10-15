@@ -70,21 +70,9 @@ $('.resource').on('mouseleave', (e) => {
     $(e.target).removeClass('hover-on');
 });
 
-// $(play).on('click', () => {
-//     console.log(wave);
-//     wave.start();
-//     play.hide();
-//     pause.show();
-//     runaway.play();
-
-// });
-
-// $(pause).on('click', () => {
-//     pause.hide();
-//     play.show();
-//     runaway.pause();
-//     wave.stop();
-// });
+setTimeout( () => {
+    runaway.play();
+}, 0.0);
 
 $(document).on('keyup', (e) => {
     if (e.keyCode == 32) {
