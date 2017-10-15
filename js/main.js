@@ -41,6 +41,7 @@ $(window).on('load', () => {
         $('body').fadeIn();
         flicker(a);
         flicker(o);
+        runaway.play();
     });
 });
 
