@@ -16,6 +16,11 @@
     src: url('../fonts/bolshevik.otf');
 }
 
+@font-face {
+    font-family: 'Agit';
+    src: url('../fonts/agit.ttf');
+}
+
 /* main */
 
 body, html {
@@ -59,7 +64,7 @@ body, html {
 }
 
 .name {
-    font-family: Bolshevik;
+    font-family: Agit;
     font-size: 3.5em;
     position: relative;
     margin: 0 auto;
