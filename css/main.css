@@ -85,10 +85,6 @@ body, html {
     text-align: center;
 }
 
-.flicker {
-    opacity: 0.77;
-}
-
 /* player */
 
 .player {
@@ -177,6 +173,11 @@ body, html {
 
 .darken {
     opacity: 0.15;
+}
+
+.flicker {
+    opacity: 0.77;
+    visibility: visible;
 }
 
 /* media queries */
