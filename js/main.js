@@ -36,14 +36,23 @@ let play = $('.play'),
 
 $('body').hide();
 
-$(window).on('load', () => {
+// $(window).on('load', () => {
+//     authenticate()
+//     .then( () => {
+//         $('body').fadeIn();
+//         flicker(a);
+//         flicker(o);
+//     })
+// });
+
+window.onload = () => {
     authenticate()
     .then( () => {
         $('body').fadeIn();
         flicker(a);
         flicker(o);
-    })
-});
+    });
+}
 
 console.log(runaway);
 
