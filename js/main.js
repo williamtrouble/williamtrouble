@@ -36,7 +36,7 @@ let play = $('.play'),
 
 $('body').hide();
 
-$(document).ready( () => {
+$(window).on('load', () => {
     authenticate()
     .then( () => {
         $('body').fadeIn();
