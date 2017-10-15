@@ -201,6 +201,7 @@ and (max-device-width : 667px) {
     }
 
     .player {
+        display: none;
         position: absolute;
         right: 0;
         top: 70%;
