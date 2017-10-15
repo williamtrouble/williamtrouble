@@ -1,19 +1,60 @@
+
+function authenticate() {
+    return new Promise( (resolve, reject) => {
+        password = 'markus';
+        userInput = prompt('Password, plz');
+        if (userInput === password) {
+            resolve()
+        } else {
+            alert('Wrong, sorry');
+        }
+    });
+}
+
+function getAmplitudeValue() {
+    return Math.random(.5, .75);
+}
+
+function flicker(letter) {
+    setInterval( () => {
+        $(letter).addClass('flicker');
+        setTimeout( () => {
+            $(letter).removeClass('flicker');
+        }, Math.random(550, 1500));
+    }, Math.random(1250, 4500))
+}
+
 let play = $('.play'),
     pause = $('.pause'),
     runaway = new Howl({
         src: ['assets/run_away.mp3']
-    });
+    }),
+    o = $('.o'),
+    m = $('.m'),
+    a = $('.a');
+
+$('body').hide();
+
+$(document).ready( () => {
+    authenticate()
+    .then( () => {
+        $('body').fadeIn();
+        flicker(a);
+        flicker(o);
+    })
+});
+
+console.log(runaway);
 
 const wave = new SiriWave({
         container: document.getElementById('wave'),
         width: 400,
         height: 30,        
-        speed: 0.05,
-        color: '#cecece',
-        frequency: 10,
+        speed: 0.1,
+        color: '#e0e0e0',
+        frequency: 20,
         autostart: false,
-        amplitude: .5,
-        amplitudeInterpolationSpeed: 100
+        amplitude: 0.8
 });
 
 $('.resource').on('mouseover', (e) => {
@@ -36,14 +77,14 @@ $(play).on('click', () => {
 });
 
 $(pause).on('click', () => {
-    console.log('click');
     pause.hide();
     play.show();
     runaway.pause();
     wave.stop();
 });
 
-
-
-
-
+$(document).on('keyup', (e) => {
+    if (e.keyCode == 32) {
+        $('.trouble').toggleClass('darken');
+    }
+});
