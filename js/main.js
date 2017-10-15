@@ -36,6 +36,8 @@ let play = $('.play'),
     m = $('.m'),
     a = $('.a');
 
+runaway.play();
+
 $('body').hide();
 
 $(window).on('load', () => {
@@ -68,34 +70,24 @@ $('.resource').on('mouseleave', (e) => {
     $(e.target).removeClass('hover-on');
 });
 
-$(play).on('click', () => {
-    console.log(wave);
-    wave.start();
-    play.hide();
-    pause.show();
-    runaway.play();
+// $(play).on('click', () => {
+//     console.log(wave);
+//     wave.start();
+//     play.hide();
+//     pause.show();
+//     runaway.play();
 
-});
+// });
 
-$(pause).on('click', () => {
-    pause.hide();
-    play.show();
-    runaway.pause();
-    wave.stop();
-});
+// $(pause).on('click', () => {
+//     pause.hide();
+//     play.show();
+//     runaway.pause();
+//     wave.stop();
+// });
 
 $(document).on('keyup', (e) => {
     if (e.keyCode == 32) {
         $('.trouble').toggleClass('darken');
     }
 });
-
-window.addEventListener('touchend', function() {
-    console.log("touchend");
-    runaway.play();
-}, false);
-
-window.addEventListener('mousedown', function() {
-    console.log("mousedown");
-    runaway.play();
-}, false);
