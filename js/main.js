@@ -44,6 +44,7 @@ $(window).on('load', () => {
             flicker(a);
             flicker(o);
         });
+        runaway.play();
     } else {
         authenticate()
         .then( () => {
