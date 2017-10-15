@@ -3,7 +3,6 @@ function authenticate() {
     return new Promise( (resolve, reject) => {
         password = 'markus';
         userInput = prompt('Password, plz');
-        // userInput = 'markus'
         if (userInput === password) {
             resolve()
         } else {
