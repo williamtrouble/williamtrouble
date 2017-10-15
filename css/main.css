@@ -26,7 +26,7 @@
 body, html {
     height: 100%;
     background: #515151;
-    background: linear-gradient(0deg, black, #424242, #a5a5a5);
+    background: linear-gradient(0deg, black, black, #a5a5a5);
     overflow: hidden;
     margin: 0;
 
@@ -34,8 +34,9 @@ body, html {
 
 .trouble { 
     background-image: url('../assets/trouble.jpg');
+    background-color: black;
     height: 100%; 
-    opacity: 0.4;
+    opacity: 0.5;
     background-position: 100% 5%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -77,7 +78,7 @@ body, html {
 .song-name {
     font-family: SubSoviet;
     font-size: 2em;
-    top: 10px;
+    top: 5px;
     position: relative;
     margin: 0 auto;
     opacity: 0.55;
@@ -91,6 +92,7 @@ body, html {
 /* player */
 
 .player {
+    display: none;
     position: absolute;
     right: 0;
     bottom: 0;

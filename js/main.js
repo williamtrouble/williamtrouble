@@ -2,8 +2,8 @@
 function authenticate() {
     return new Promise( (resolve, reject) => {
         password = 'markus';
-        // userInput = prompt('Password, plz');
-        userInput = 'markus'
+        userInput = prompt('Password, plz');
+        // userInput = 'markus'
         if (userInput === password) {
             resolve()
         } else {
@@ -37,25 +37,13 @@ let play = $('.play'),
 $('body').hide();
 
 $(window).on('load', () => {
-    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-        authenticate()
-        .then( () => {
-            $('body').fadeIn();
-            flicker(a);
-            flicker(o);
-        });
-        runaway.play();
-    } else {
-        authenticate()
-        .then( () => {
-            $('body').fadeIn();
-            flicker(a);
-            flicker(o);
-        });
-    }
+    authenticate()
+    .then( () => {
+        $('body').fadeIn();
+        flicker(a);
+        flicker(o);
+    });
 });
-
-console.log(runaway);
 
 const wave = new SiriWave({
         container: document.getElementById('wave'),
