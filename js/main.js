@@ -27,11 +27,16 @@ function flicker(letter) {
 let play = $('.play'),
     pause = $('.pause'),
     runaway = new Howl({
-        src: ['assets/run_away.mp3']
+        src: ['assets/run_away.mp3'],
+        format: 'mp3',
+        buffer: false,
+        autoplay: true
     }),
     o = $('.o'),
     m = $('.m'),
     a = $('.a');
+
+runaway.play();
 
 $('body').hide();
 
@@ -41,7 +46,7 @@ $(window).on('load', () => {
         $('body').fadeIn();
         flicker(a);
         flicker(o);
-        runaway.play();
+        // runaway.play()
     });
 });
 
