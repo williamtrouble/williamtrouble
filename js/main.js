@@ -36,8 +36,6 @@ let play = $('.play'),
     m = $('.m'),
     a = $('.a');
 
-runaway.play();
-
 $('body').hide();
 
 $(window).on('load', () => {
@@ -46,7 +44,6 @@ $(window).on('load', () => {
         $('body').fadeIn();
         flicker(a);
         flicker(o);
-        // runaway.play()
     });
 });
 
@@ -92,3 +89,13 @@ $(document).on('keyup', (e) => {
         $('.trouble').toggleClass('darken');
     }
 });
+
+window.addEventListener('touchend', function() {
+    console.log("touchend");
+    runaway.play();
+}, false);
+
+window.addEventListener('mousedown', function() {
+    console.log("mousedown");
+    runaway.play();
+}, false);
