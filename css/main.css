@@ -202,7 +202,7 @@ and (max-device-width : 667px) {
     .player {
         position: absolute;
         right: 0;
-        top: 75%;
+        top: 70%;
         left: 0;
         padding: 1rem;
         z-index: 1000;
