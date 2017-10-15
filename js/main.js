@@ -36,23 +36,23 @@ let play = $('.play'),
 
 $('body').hide();
 
-// $(window).on('load', () => {
-//     authenticate()
-//     .then( () => {
-//         $('body').fadeIn();
-//         flicker(a);
-//         flicker(o);
-//     })
-// });
-
-window.onload = () => {
-    authenticate()
-    .then( () => {
-        $('body').fadeIn();
-        flicker(a);
-        flicker(o);
-    });
-}
+$(window).on('load', () => {
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        authenticate()
+        .then( () => {
+            $('body').fadeIn();
+            flicker(a);
+            flicker(o);
+        });
+    } else {
+        authenticate()
+        .then( () => {
+            $('body').fadeIn();
+            flicker(a);
+            flicker(o);
+        });
+    }
+});
 
 console.log(runaway);
 
