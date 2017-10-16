@@ -1,17 +1,3 @@
-$('body').hide();
-
-function authenticate() {
-    return new Promise( (resolve, reject) => {
-        password = 'markus';
-        userInput = prompt('Password, plz');
-        if (userInput === password) {
-            resolve()
-        } else {
-            alert('Wrong, sorry');
-        }
-    });
-}
-
 function getAmplitudeValue() {
     return Math.random(.5, .75);
 }
@@ -37,14 +23,11 @@ let play = $('.play'),
     m = $('.m'),
     a = $('.a');
 
-
+$('body').hide();
 $(window).on('load', () => {
-    authenticate()
-    .then( () => {
         $('body').fadeIn();
         flicker(a);
         flicker(o);
-    });
 });
 
 const wave = new SiriWave({
@@ -66,10 +49,4 @@ $('.resource').on('mouseover', (e) => {
 $('.resource').on('mouseleave', (e) => {
     $(e.target).addClass('hover-off');
     $(e.target).removeClass('hover-on');
-});
-
-$(document).on('keyup', (e) => {
-    if (e.keyCode == 32) {
-        $('.trouble').toggleClass('darken');
-    }
 });
