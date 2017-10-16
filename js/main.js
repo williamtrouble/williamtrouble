@@ -2,6 +2,7 @@ var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
 
 if (iOS) {
     console.log(iOS);
+    alert('fuck!');
     authenticate()
     .then( () => {
         $('body').fadeIn();
