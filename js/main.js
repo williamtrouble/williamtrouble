@@ -41,12 +41,12 @@ runaway.play();
 $('body').hide();
 
 $(window).on('load', () => {
-    authenticate()
-    .then( () => {
         $('body').fadeIn();
         flicker(a);
         flicker(o);
-    });
+    // authenticate()
+    // .then( () => {
+    // });
 });
 
 const wave = new SiriWave({
