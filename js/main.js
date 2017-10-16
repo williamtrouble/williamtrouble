@@ -25,7 +25,7 @@ let play = $('.play'),
     m = $('.m'),
     a = $('.a');
 
-document.ready( () => {
+$(document).ready( () => {
         $('body').fadeIn();
         flicker(a);
         flicker(o);
