@@ -23,8 +23,8 @@ let play = $('.play'),
     m = $('.m'),
     a = $('.a');
 
-$('body').hide();
 $(window).on('load', () => {
+        $('body').hide();
         $('body').fadeIn();
         flicker(a);
         flicker(o);
