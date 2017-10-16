@@ -1,15 +1,4 @@
-var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-
-if (iOS) {
-    console.log(iOS);
-    alert('fuck!');
-    authenticate()
-    .then( () => {
-        $('body').fadeIn();
-        flicker(a);
-        flicker(o);
-    });
-}
+$('body').hide();
 
 function authenticate() {
     return new Promise( (resolve, reject) => {
@@ -48,11 +37,8 @@ let play = $('.play'),
     m = $('.m'),
     a = $('.a');
 
-runaway.play();
 
-$('body').hide();
-
-$(document).on('load', () => {
+$(window).on('load', () => {
     authenticate()
     .then( () => {
         $('body').fadeIn();
@@ -70,10 +56,6 @@ const wave = new SiriWave({
         frequency: 20,
         autostart: false,
         amplitude: 0.8
-});
-
-$('body').on('touchend', function() {
-    alert('wut');
 });
 
 $('.resource').on('mouseover', (e) => {
