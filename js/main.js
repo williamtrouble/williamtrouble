@@ -40,13 +40,13 @@ runaway.play();
 
 $('body').hide();
 
-$(window).on('load', () => {
+$(document).on('load', () => {
+    authenticate()
+    .then( () => {
         $('body').fadeIn();
         flicker(a);
         flicker(o);
-    // authenticate()
-    // .then( () => {
-    // });
+    });
 });
 
 const wave = new SiriWave({
@@ -60,7 +60,7 @@ const wave = new SiriWave({
         amplitude: 0.8
 });
 
-$('body').on('touchend', () => {
+$('body').('touchend', () => {
     alert('wut');
 });
 
