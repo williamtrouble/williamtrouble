@@ -1,3 +1,14 @@
+var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+
+if (iOS) {
+    console.log(iOS);
+    authenticate()
+    .then( () => {
+        $('body').fadeIn();
+        flicker(a);
+        flicker(o);
+    });
+}
 
 function authenticate() {
     return new Promise( (resolve, reject) => {
@@ -60,7 +71,7 @@ const wave = new SiriWave({
         amplitude: 0.8
 });
 
-$('body').('touchend', () => {
+$('body').on('touchend', function() {
     alert('wut');
 });
 
