@@ -25,12 +25,17 @@ let play = $('.play'),
     m = $('.m'),
     a = $('.a');
 
-$(window).on('load', () => {
-        
+document.ready( () => {
         $('body').fadeIn();
         flicker(a);
         flicker(o);
 });
+
+// $(window).on('load', () => {   
+//         $('body').fadeIn();
+//         flicker(a);
+//         flicker(o);
+// });
 
 const wave = new SiriWave({
         container: document.getElementById('wave'),
