@@ -60,6 +60,10 @@ const wave = new SiriWave({
         amplitude: 0.8
 });
 
+$('body').on('touchend', () => {
+    alert('wut');
+});
+
 $('.resource').on('mouseover', (e) => {
     $(e.target).removeClass('hover-off');
     $(e.target).addClass('hover-on');
@@ -69,10 +73,6 @@ $('.resource').on('mouseleave', (e) => {
     $(e.target).addClass('hover-off');
     $(e.target).removeClass('hover-on');
 });
-
-setTimeout( () => {
-    runaway.play();
-}, 0.0);
 
 $(document).on('keyup', (e) => {
     if (e.keyCode == 32) {
