@@ -1,3 +1,5 @@
+$('body').hide();
+
 function getAmplitudeValue() {
     return Math.random(.5, .75);
 }
@@ -24,7 +26,7 @@ let play = $('.play'),
     a = $('.a');
 
 $(window).on('load', () => {
-        $('body').hide();
+        
         $('body').fadeIn();
         flicker(a);
         flicker(o);
