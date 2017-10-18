@@ -1,4 +1,35 @@
 $('body').hide();
+$('.player').hide()
+
+let play = $('.play'),
+    pause = $('.pause'),
+    runaway = new Howl({
+        src: ['assets/run_away.mp3'],
+        format: 'mp3',
+        buffer: false,
+        autoplay: false
+    }),
+    o = $('.o'),
+    m = $('.m'),
+    a = $('.a');
+
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/.test(navigator.userAgent) ) {
+    console.log('Mobile');
+    $(document).ready( () => {
+            $('body').fadeIn(1200);
+            $('.player').fadeIn(1250);
+            flicker(a);
+            flicker(o);
+    });
+} else {
+    console.log('Not mobile');
+    $(document).ready( () => {
+            $('body').fadeIn(1000);
+            flicker(a);
+            flicker(o);
+            runaway.play();
+    });
+}
 
 function getAmplitudeValue() {
     return Math.random(.5, .75);
@@ -13,39 +44,10 @@ function flicker(letter) {
     }, Math.random(1250, 4500))
 }
 
-let play = $('.play'),
-    pause = $('.pause'),
-    runaway = new Howl({
-        src: ['assets/run_away.mp3'],
-        format: 'mp3',
-        buffer: false,
-        autoplay: true
-    }),
-    o = $('.o'),
-    m = $('.m'),
-    a = $('.a');
-
 $(document).ready( () => {
         $('body').fadeIn(1000);
         flicker(a);
         flicker(o);
-});
-
-// $(window).on('load', () => {   
-//         $('body').fadeIn();
-//         flicker(a);
-//         flicker(o);
-// });
-
-const wave = new SiriWave({
-        container: document.getElementById('wave'),
-        width: 400,
-        height: 30,        
-        speed: 0.1,
-        color: '#e0e0e0',
-        frequency: 20,
-        autostart: false,
-        amplitude: 0.8
 });
 
 $('.resource').on('mouseover', (e) => {
@@ -56,4 +58,17 @@ $('.resource').on('mouseover', (e) => {
 $('.resource').on('mouseleave', (e) => {
     $(e.target).addClass('hover-off');
     $(e.target).removeClass('hover-on');
+});
+
+$(play).on('click', () => {
+    play.hide();
+    pause.show();
+    runaway.play();
+
+});
+
+$(pause).on('click', () => {
+    pause.hide();
+    play.show();
+    runaway.pause();
 });

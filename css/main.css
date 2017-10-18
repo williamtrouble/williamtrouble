@@ -204,24 +204,23 @@ and (max-device-width : 667px) {
     }
 
     .player {
-        display: none;
         position: absolute;
         right: 0;
-        top: 70%;
+        top: 13%;
         left: 0;
         padding: 1rem;
         z-index: 1000;
         margin: 0 auto;
         height: 75px;
-        width: 75%;
+        width: 20%;
     }
 
     .play,
     .pause {
         position: relative;
-        bottom: 35px;
-        right: 40px;
-        width: 20%;
+        bottom: 60px;
+        /*right: 40px;*/
+        width: 100%;
         opacity: .45;
         margin: 0 auto;
     }
