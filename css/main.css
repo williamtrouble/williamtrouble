@@ -237,8 +237,9 @@ and (max-device-width : 667px) {
         margin: 0 auto;
         text-align: center;
         opacity: 0.75;
-        letter-spacing: 0;
+        letter-spacing: 0.4em;
         font-weight: 200;
+
     }
 
     .first {
@@ -257,6 +258,7 @@ and (max-device-width : 667px) {
         bottom: 35px;
         opacity: 0.55;
         text-align: center;
+        letter-spacing: 0.5em;
     }
 
 }
