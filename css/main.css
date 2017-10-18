@@ -1,8 +1,13 @@
 /* FONTS */
 
 @font-face {
-    font-family: 'Soviet';
-    src: url('../fonts/propaganda.ttf');
+    font-family: 'PulpFictionItalic';
+    src: url('../fonts/fiction_italic.ttf');
+}
+
+@font-face {
+    font-family: 'PulpFiction';
+    src: url('../fonts/fiction.ttf');
 }
 
 @font-face {
@@ -66,7 +71,7 @@ body, html {
 
 .first,
 .last {
-    font-family: SubSoviet;
+    font-family: PulpFictionItalic;
     font-size: 3.5em;
     position: relative;
     margin: 0 auto;
@@ -74,14 +79,15 @@ body, html {
     opacity: 0.75;
     letter-spacing: 0.2em;
     line-height: 0.88em;
+    /*text-shadow: 3px 1px #232323;*/
 }
 
 .last {
-    bottom: 55px;
+    bottom: 50px;
 }
 
 .song-name {
-    font-family: SubSoviet;
+    font-family: PulpFiction;
     font-size: 2em;
     position: relative;
     bottom: 55px;
