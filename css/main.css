@@ -215,9 +215,9 @@ and (max-device-width : 667px) {
         left: 0;
         padding: 1rem;
         z-index: 1000;
-        margin: 0 auto;
+        margin: 0.5em auto;
         height: 75px;
-        width: 10%;
+        width: 8%;
         opacity: 0.5;
     }
 
@@ -225,7 +225,7 @@ and (max-device-width : 667px) {
     .pause {
         position: relative;
         bottom: 25px;
-        right: 10px;
+        right: 20px;
         width: 120px;
         opacity: .45;
         margin: 0 auto;
