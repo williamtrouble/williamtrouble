@@ -64,7 +64,8 @@ body, html {
     font-weight: 200;
 }
 
-.name {
+.first,
+.last {
     font-family: Agit;
     font-size: 3.5em;
     position: relative;
@@ -75,11 +76,15 @@ body, html {
     line-height: 0.88em;
 }
 
+.last {
+    bottom: 55px;
+}
+
 .song-name {
     font-family: SubSoviet;
     font-size: 2em;
-    top: 5px;
     position: relative;
+    bottom: 55px;
     margin: 0 auto;
     opacity: 0.55;
     text-align: center;
@@ -206,26 +211,28 @@ and (max-device-width : 667px) {
     .player {
         position: absolute;
         right: 0;
-        top: 13%;
+        top: 15%;
         left: 0;
         padding: 1rem;
         z-index: 1000;
         margin: 0 auto;
         height: 75px;
-        width: 20%;
+        width: 10%;
+        opacity: 0.5;
     }
 
     .play,
     .pause {
         position: relative;
-        bottom: 60px;
-        /*right: 40px;*/
-        width: 100%;
+        bottom: 25px;
+        right: 10px;
+        width: 120px;
         opacity: .45;
         margin: 0 auto;
     }
 
-    .name {
+    .first,
+    .last {
         font-size: 5em;
         position: relative;
         margin: 0 auto;
@@ -235,12 +242,20 @@ and (max-device-width : 667px) {
         font-weight: 200;
     }
 
+    .first {
+        top: 50px;
+    }
+
+    .last {
+        bottom: 30px;
+    }
+
     .song-name {
         font-size: 3em;
         position: relative;
         margin: 0 auto;
         left: 5px;
-        bottom: 20px;
+        bottom: 35px;
         opacity: 0.55;
         text-align: center;
     }
