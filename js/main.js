@@ -3,15 +3,18 @@ $('.player').hide()
 
 let play = $('.play'),
     pause = $('.pause'),
-    runaway = new Howl({
-        src: ['assets/run_away.mp3'],
-        format: 'mp3',
-        buffer: false,
-        autoplay: false
-    }),
     o = $('.o'),
     m = $('.m'),
     a = $('.a');
+
+let runaway = new Howl({
+        src: ['assets/run_away.mp3'],
+        format: 'mp3',
+        buffer: false,
+        autoplay: false,
+        html5: true,
+        preload: true
+    });
 
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/.test(navigator.userAgent) ) {
     console.log('Mobile');
