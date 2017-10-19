@@ -263,15 +263,68 @@ and (max-device-width : 667px) {
 
 }
 
-/*@media only screen
-and (min-device-width: 720px)
-and (max-device-width: 1024px) {
-    .resource {
-        display: block;
-        width: 90%;
-        margin: 0 auto;
+/* iPhone landscape */
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px) 
+and (orientation : landscape) {
+
+    .trouble {
+        background-position: -50px -3px;
+        background-size: 122%;
     }
-}*/
+
+    .titles {
+        left: 15.5%;
+        width: 50%;
+    }
+
+
+    .first {
+        top: 4px;
+        font-size: 4em;
+        left: 275px;
+    }
+
+    .last {
+        width: 75%;
+        font-size: 4em;
+        left: 242px;
+        bottom: 55px;
+    }
+    
+    .song-name {
+        font-size: 2.5em;
+        left: 278px;
+        bottom: 63px;
+    }
+
+    .links {
+        width: 50%;
+        margin: 0 auto;
+        left: 97px;
+    }
+
+    .resource {
+        display: inline-block;
+        width: 25%
+    }
+
+    .player {
+        width: 75px;
+        height: 75px;
+        bottom: 424px;
+        right: 200px;
+    }
+
+    .play,
+    .pause {
+        width: 132px;
+        bottom: 28px;
+        left: -26px;
+    }
+
+}
 
 /* iPad portrait */
 
