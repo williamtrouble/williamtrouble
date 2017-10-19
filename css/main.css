@@ -327,4 +327,46 @@ and (orientation : portrait) {
   and (orientation: landscape) 
   and (-webkit-min-device-pixel-ratio: 1) {
 
+    .trouble {
+        background-position: -8px -3px;
+    }
+
+    .titles {
+        width: 50%;
+    }
+
+    .first,
+    .last {
+        width: 75%;
+        font-size: 4em;
+        margin: 0 auto;
+        left: 249px;
+    }
+    
+    .song-name {
+        font-size: 3em;
+        left: 274px;
+    }
+
+    .links {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    .resource {
+        display: inline-block;
+        width: 32%
+    }
+
+    .player {
+        width: 150px;
+    }
+
+    .play,
+    .pause {
+        width: 200px;
+        bottom: 25px;
+        left: -23px;
+    }
+
 }
