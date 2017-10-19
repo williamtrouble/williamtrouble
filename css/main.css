@@ -359,14 +359,15 @@ and (orientation : portrait) {
     }
 
     .player {
-        width: 150px;
+        width: 105px;
+        height: 105px;
     }
 
     .play,
     .pause {
-        width: 200px;
-        bottom: 25px;
-        left: -23px;
+        width: 160px;
+        bottom: 28px;
+        left: -26px;
     }
 
 }
